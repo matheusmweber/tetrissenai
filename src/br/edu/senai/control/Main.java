@@ -8,9 +8,11 @@ public class Main {
 	
 	public static void main(String[] args) {
 		
+		
+	//construindo tabuleiro base para o jogo 	
 	Fundo tabuleiro = new Fundo(23, 10);
-	
-	Quadrado teste = new Quadrado();
+	//construindo primeiro objeto informando o fundo onde ele vai existir
+	Quadrado quadrado = new Quadrado(tabuleiro);
 	
 		
 	}
