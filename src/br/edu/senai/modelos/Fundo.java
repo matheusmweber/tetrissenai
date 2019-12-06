@@ -36,22 +36,48 @@ public class Fundo {
 	// metodo para insserir o quadrado no tabuleiro
 	public void inserir(Quadrado quadrado) {
 
-		//for - percorrendo o objeto quadrado e substituindo ele no tabuleiro
+		// for - percorrendo o objeto quadrado e substituindo ele no tabuleiro
 		for (int c = 0; c < quadrado.getQuadrado().length; c++) {
 			for (int l = 0; l < quadrado.getQuadrado()[1].length; l++) {
 
-				tabuleiro[c][l+4] = quadrado.getQuadrado()[c][l]; // a soma de l+4 coloca o objeto no centro do tabuleiro
+				tabuleiro[c][l + 4] = quadrado.getQuadrado()[c][l]; // a soma de l+4 coloca o objeto no centro do
+																	// tabuleiro
 			}
 
 		}
+	}
 
-		// Printando tabuleiro
-		for (int c = 0; c < tabuleiro.length; c++) {
-			for (int l = 0; l < tabuleiro[1].length; l++) {
-				System.out.print(tabuleiro[c][l] + " ");
+	// Printando tabuleiro
+//		for (int c = 0; c < tabuleiro.length; c++) {
+//			for (int l = 0; l < tabuleiro[1].length; l++) {
+//				System.out.print(tabuleiro[c][l] + " ");
+//
+//			}
+//			System.out.println();
+//		}
+//	}
 
+	// metodo para fazer o quadrado "cair"
+	public void gravidade(Quadrado quadrado) {
+		for (int t = 0; t < tabuleiro.length; t++) {
+			for (int c = 0; c < quadrado.getQuadrado().length; c++) {
+				for (int l = 0; l < quadrado.getQuadrado()[1].length; l++) {
+
+					tabuleiro[c + 1][l + 4] = quadrado.getQuadrado()[c][l]; // a soma de l+4 coloca o objeto no centro
+					//TODO não funcionou a queda
+				}
+			}
+
+			// Printando tabuleiro
+			for (int c = 0; c < tabuleiro[1].length; c++) {
+				for (int l = 0; l < tabuleiro[1].length; l++) {
+					System.out.print(tabuleiro[c][l] + " ");
+
+				}
+				System.out.println();
 			}
 			System.out.println();
 		}
+
 	}
 }

@@ -15,8 +15,10 @@ public class Main {
 	Quadrado quadrado = new Quadrado(tabuleiro);
 	
 	//metodo para inserir o quadrado no tabuleiro
-	tabuleiro.inserir(quadrado);
+	//tabuleiro.inserir(quadrado);
 	
+	//metodo para fazer o objeto "cair" em determinada frequencia
+	tabuleiro.gravidade(quadrado);
 	
 
 	
