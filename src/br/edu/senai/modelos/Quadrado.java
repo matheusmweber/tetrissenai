@@ -24,6 +24,25 @@ public class Quadrado extends Fundo {
 		
 		//posicionando o quadrado no fundo 
 		
+
+	
+	}
+
+
+	public Quadrado(boolean[][] quadrado, Fundo tabuleiro) {
+		super();
+		this.quadrado = quadrado;
+		this.tabuleiro = tabuleiro;
+	}
+
+
+	public boolean[][] getQuadrado() {
+		return this.quadrado;
+	}
+
+
+	public void setQuadrado(boolean[][] quadrado) {
+		this.quadrado = quadrado;
 	}
 	}
 

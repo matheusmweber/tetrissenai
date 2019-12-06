@@ -14,7 +14,12 @@ public class Main {
 	//construindo primeiro objeto informando o fundo onde ele vai existir
 	Quadrado quadrado = new Quadrado(tabuleiro);
 	
-		
+	//metodo para inserir o quadrado no tabuleiro
+	tabuleiro.inserir(quadrado);
+	
+	
+
+	
 	}
 
 }
